@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dice Roll</title>
+  <style>
+    .dice {
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      border: 1px solid black;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .dot {
+      width: 50px;
+      height: 50px;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="dice" id="dice">
+    <div class="dot" id="dot1"></div>
+    <div class="dot" id="dot2"></div>
+    <div class="dot" id="dot3"></div>
+    <div class="dot" id="dot4"></div>
+    <div class="dot" id="dot5"></div>
+    <div class="dot" id="dot6"></div>
+  </div>
+  <button onclick="rollDice()">Roll Dice</button>
+  <script>
+    function rollDice() {
+      // Clear all dots
+      const dots = document.querySelectorAll('.dot');
+      dots.forEach(dot => {
+        dot.style.display = 'none';
+      });
+
+      // Randomly show dots
+      const randomNum = Math.floor(Math.random() * 6) + 1;
+      for (let i = 1; i <= randomNum; i++) {
+        document.getElementById(`dot${i}`).style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
