@@ -1,0 +1,57 @@
+body{
+	text-align: center;
+	background-color: lightblue;
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+
+.container{
+	height: 70vmin;
+	display: flex;
+justify-content: center;
+align-items: center;
+	
+
+}
+.game{
+height: 70vmin;
+width: 70vmin;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 5vmin;
+
+
+}
+.btn{
+	
+	
+	height: 18vmin;
+	width:18vmin ;
+	border-radius: 1rem;
+	font-size: 30px;
+	color: brown;
+}
+.clr{
+	background-color: steelblue;
+	border-radius: 10px;
+	font-size: 20px;
+	height: 40px;
+	width: 100px;
+}
+#winner{
+	font-size: 30px;
+	color: goldenrod;
+
+}
+#new{
+	font-size: 10px;
+	height: 20px;
+	width: 100px;
+	background-color: brown;
+	border-radius: 5px;
+	visibility: hidden;
+}
